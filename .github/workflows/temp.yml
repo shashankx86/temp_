@@ -26,8 +26,9 @@ jobs:
         mkdir test_1 
         cd test_1
         echo "this is test file" > gg.txt
-        git config user.name "shashankx86"
-        git config user.email "64682801+shashankx86@users.noreply.github.com"
+        git config --global user.name "shashankx86"
+        git config --global user.email "64682801+shashankx86@users.noreply.github.com"
+        git config --global init.defaultBranch master
         git init
         git remote add origin "https://oauth2:${token}@gitlab.com/shashankx86/calinix_iso_test.git"
         git add gg.txt
