@@ -25,5 +25,7 @@ jobs:
         echo Starting to push repo to gitlab
         git config user.name "shashankx86"
         git config user.email "64682801+shashankx86@users.noreply.github.com"
+        git add .
+        git commit -m "initial commit"
         git remote set-url origin "https://oauth2:${token}@gitlab.com/shashankx86/calinix_iso_test.git"
         git push origin master
