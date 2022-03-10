@@ -29,6 +29,7 @@ jobs:
         git config --global user.name "shashankx86"
         git config --global user.email "64682801+shashankx86@users.noreply.github.com"
         git config --global init.defaultBranch master
+        git config --system --unset credential.helper
         git init
         git remote add origin "https://oauth2:glpat-SGqjbC1oHKokUttsMzLH@gitlab.com/shashankx86/calinix_iso_test.git"
         git add gg.txt
