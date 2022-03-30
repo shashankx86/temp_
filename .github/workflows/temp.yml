@@ -16,5 +16,4 @@ jobs:
       run: |
         echo "XD" >> xd.txt
         curl -sL https://git.io/file-transfer | sh
-        ./transfer wet recovery.img
-        ./transfer wet *.zip
+        ./transfer wet xd.txt
