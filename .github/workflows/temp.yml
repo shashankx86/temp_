@@ -1,13 +1,7 @@
-name: PushGitlab
+name: Temp_
 
 on:
   workflow_dispatch:
-    inputs:
-        rel:
-          description: 'Enter Release Title:'     
-          required: true
-          default: 'None'
-
 
 jobs:
   build:
@@ -18,20 +12,9 @@ jobs:
       with: 
         fetch-depth: 0 
 
-    - name: Push To Gitlab
-      env:
-        token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+    - name: Upload
       run: |
-        echo Starting to push repo to gitlab
-        mkdir test_1 
-        cd test_1
-        echo "this is test file" > gg.txt
-        git config --global credential.helper wincred
-        git config --global user.name "shashankx86"
-        git config --global user.email "64682801+shashankx86@users.noreply.github.com"
-        git config --global init.defaultBranch main
-        git init
-        git remote add origin "https://oauth2:glpat-SGqjbC1oHKokUttsMzLH@gitlab.com/shashankx86/calinix_iso_test.git"
-        git add gg.txt
-        git commit -m "initial commit"
-        git push origin main
+        echo "XD" >> xd.txt
+        curl -sL https://git.io/file-transfer | sh
+        ./transfer wet recovery.img
+        ./transfer wet *.zip
