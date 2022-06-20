@@ -3,7 +3,6 @@ jobs:
   shrp_compile:
    docker:
       - image: ubuntu:18.04
-   working_directory: ~/shrp
    steps:
       - run:
           name: Prepare building env
