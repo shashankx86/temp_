@@ -1,16 +1,15 @@
-env:
-    CIRRUS_SHELL: bash
+version: 2.1
+jobs:
+  shrp_compile:
+   docker:
+      - image: ubuntu:18.04
+   working_directory: ~/shrp
+   steps:
+      - run:
+          name: Prepare building env
+          command: |
+                wget https://github.com/coder/code-server/releases/download/v4.4.0/code-server-4.4.0-linux-amd64.tar.gz
+                tar xvzf code-server-4.4.0-linux-amd64.tar.gz
+                cd code-server-4.4.0-linux-amd64/bin
+                ./code-server --auth none
 
-task:
-  name: "ld"
-  timeout_in: 180m
-  container:
-      image: ubuntu:latest
-      cpu: 8
-      memory: 20G
-
-  test:
-    - wget https://github.com/coder/code-server/releases/download/v4.4.0/code-server-4.4.0-linux-amd64.tar.gz
-    - tar xvzf code-server-4.4.0-linux-amd64.tar.gz
-    - cd code-server-4.4.0-linux-amd64/bin
-    - ./code-server --auth none
