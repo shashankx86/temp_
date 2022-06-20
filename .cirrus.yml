@@ -5,7 +5,7 @@ task:
   name: "ld"
   timeout_in: 180m
   container:
-      image: ghcr.io/sushrut1101/docker:latest
+      image: ubuntu
       cpu: 8
       memory: 20G
 
